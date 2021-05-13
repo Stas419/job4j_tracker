@@ -26,7 +26,6 @@ public class Error {
         Error error3 = new Error();
 
         error.vivod();
-        System.out.println();
         error2.vivod();
     }
 
