@@ -5,9 +5,8 @@ public class Reduce {
 
     public void to(int[] array) {
        this.array = new int[array.length];
-        for (int i = 0; i < this.array.length; i++) {
-            this.array[i] = array[i];
-        }
+       this.array = array;
+
     }
 
     public void print() {
