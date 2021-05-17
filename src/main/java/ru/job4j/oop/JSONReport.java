@@ -4,6 +4,7 @@ public class JSONReport extends HtmlReport {
 
     @Override
     public String generate(String name, String body) {
-        return name + ": name," +  System.lineSeparator() + body + " : body";
+        return "{ "+ System.lineSeparator() + " name : " + name +
+                System.lineSeparator() + " body : "+ body + System.lineSeparator() +"{ ";
     }
 }
