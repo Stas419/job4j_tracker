@@ -14,5 +14,8 @@ public class College {
         student.setGroup(5);
 
         student.setDateRceipts(20.03);
+
+        System.out.println(student.getSurname() + " " + student.getName() + " " + student.getPatronymic()
+                + " " + "Группа - "+ student.getGroup() + " " + "Дата рождения - " + student.getDateRceipts());
     }
 }
