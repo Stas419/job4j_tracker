@@ -38,7 +38,7 @@ public class Library {
 
         for (int i = 0; i < book.length; i++) {
             Book bokk = book[i];
-            if(bokk.getName() == "Чистый код"){
+            if((bokk.getName().equals("Чистый код"))){
                 System.out.println("В списке есть такая книга");
                 System.out.println(bok.getName() + " - " + bok.getNumPages());
             }
