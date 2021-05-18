@@ -2,22 +2,10 @@ package ru.job4j.pojo;
 
 public class Library {
     public static void main(String[] args) {
-        Book cleanCcode = new Book();
-        Book literature = new Book();
-        Book geography = new Book();
-        Book physics = new Book();
-
-        cleanCcode.setName("Чистый код");
-        cleanCcode.setNumPages(250);
-
-        literature.setName("Литература");
-        literature.setNumPages(230);
-
-        geography.setName("География");
-        geography.setNumPages(180);
-
-        physics.setName("физика");
-        physics.setNumPages(150);
+        Book cleanCcode = new Book("Чистый код", 250);
+        Book literature = new Book("Литература", 230);
+        Book geography = new Book("География", 100);
+        Book physics = new Book("физика", 150);
 
         Book[] book = new Book[4];
         book[0] = cleanCcode;
