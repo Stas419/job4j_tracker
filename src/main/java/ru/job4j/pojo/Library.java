@@ -36,7 +36,7 @@ public class Library {
         System.out.println( "ячейка с индексом 3 - "+ book[3].getName() + " - " +  book[3].getNumPages());
 
         for(Book bok1: book) {
-            if ((bok1.getName().equals("Чистый код"))) {
+            if ("Чистый код".equals(bok1.getName())) {
                 System.out.println("В списке есть такая книга");
                 System.out.println(bok.getName() + " - " + bok.getNumPages());
             }
