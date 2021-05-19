@@ -10,7 +10,7 @@ public class StartUI {
         Tracker tracker = new Tracker();
         Item item = new Item();
         tracker.add(item);
-        System.out.println(tracker.findById(1));
+        System.out.println(tracker.findById(2));
 
 
 
