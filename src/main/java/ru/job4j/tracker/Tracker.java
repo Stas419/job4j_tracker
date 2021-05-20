@@ -61,4 +61,17 @@ public class Tracker {
         }
         return true;
     }
+
+    public boolean delete(int id) {
+        boolean rsl = false;
+        for (int i = 0; i < this.items.length; i++) {
+            if(this.items[i].getId() == indexOf(id)){
+                System.arraycopy(this.items, id + 1, this.items, i,this.size - i );
+                this.items[this.size - 1] = null;
+                this.size--;
+                rsl = true;
+            }
+        }
+        return rsl;
+    }
 }
