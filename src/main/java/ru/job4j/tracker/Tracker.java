@@ -48,7 +48,10 @@ public class Tracker {
     public boolean replace(Item item, int id){
         boolean rsl = false;
         int index = indexOf(id);
-        if (index != -1) {
+        if (index == -1) {
+            System.out.println("результат равен: -1");
+        }
+        else{
             item.setId(index);
             items[index] = item;
             rsl = true;
@@ -59,7 +62,10 @@ public class Tracker {
     public boolean delete(int id) {
         boolean rsl = false;
         int index = indexOf(id);
-            if(index != -1){
+            if(index == -1){
+                System.out.println("результат равен: -1");
+            }
+            else{
                 System.arraycopy(items, index + 1, items, index,size - index - 1 );
                 items[size - 1] = null;
                 size--;
