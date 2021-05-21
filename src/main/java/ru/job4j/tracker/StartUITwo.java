@@ -4,10 +4,41 @@ import java.util.Scanner;
 
 public class StartUITwo {
     public void init(Scanner scanner, Tracker tracker) {
-        boolean run = true;
+        boolean run = false;
         while (run) {
             this.showMenu();
-            /* if */
+            System.out.print("Select: ");
+            int select = Integer.valueOf(scanner.nextLine());
+            if (select == 0) {
+                System.out.println("=== Create a new Item ====");
+                System.out.print("Enter name: ");
+                String name = scanner.nextLine();
+                Item item = new Item(name);
+                tracker.add(item);
+                if(select == 1){
+                    Item[] item2 = new Item[10];
+                    Item[] list = tracker.findAll(item2);
+                        System.out.println(list.toString());
+                }
+
+                if(select == 2){
+                    System.out.println("введите id который хотите изменить");
+                    int id = Integer.parseInt(scanner.nextLine());
+                    tracker.findById(id);
+                    Item item1 = new Item();
+                    tracker.replace(item1, id);
+                }
+
+                if(select == 3){
+
+                }
+
+
+                /*            } else if (...) { */
+                /*             Добавить остальные действия системы по меню. */
+            } else if (select == 6) {
+                run = false;
+            }
         }
     }
 
@@ -33,5 +64,6 @@ public class StartUITwo {
         new StartUITwo().init(scanner, tracker);
         startUITwo.showMenu();
         int select = Integer.valueOf(scanner.nextLine());
+
     }
 }
