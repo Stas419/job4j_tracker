@@ -40,26 +40,20 @@ public class Tracker {
     }
 
     public Item findById(int id) {
-        Item rsl = null;
-        for (int index = 0; index < size; index++) {
-            Item item = items[index];
-            if (item.getId() == id) {
-                rsl = item;
-                break;
-            }
-        }
-        return rsl;
+        int index = indexOf(id);
+        return index != -1 ? items[index] : null;
+
     }
 
-    public boolean replace(Item items, int id){
+    public boolean replace(Item item, int id){
         boolean rsl = false;
-        for (int i = 0; i < this.items.length; i++) {
-            if(this.items[i].getId() == indexOf(id)){
-                this.items[i] = items;
-                rsl = true;
-            }
+        int index = indexOf(id);
+        if (index != -1) {
+            item.setId(index);
+            items[index] = item;
+            rsl = true;
         }
-        return true;
+        return rsl;
     }
 
     public boolean delete(int id) {
