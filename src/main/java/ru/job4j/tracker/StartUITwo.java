@@ -1,5 +1,6 @@
 package ru.job4j.tracker;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class StartUITwo {
@@ -17,11 +18,25 @@ public class StartUITwo {
                 tracker.add(item);
                 System.out.println("Добавленная заявка: " + item);
             }
+            else if (select == 1) {
+                System.out.println("=== Show all items ====");
+                Item[] items = tracker.findAll();
+                if (items.length > 0) {
+                    for (Item item : items) {
+                        System.out.println(item);
+                    }
+                } else {
+                    System.out.println("Хранилище еще не содержит заявок");
+                }
+            }
             else if(select == 6){
                 run = false;
             }
+
         }
     }
+
+
 
     private void showMenu() {
         String[] menu = {"Add new Item", "Show all items", "Edit item",
