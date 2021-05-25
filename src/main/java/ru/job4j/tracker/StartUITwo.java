@@ -29,6 +29,16 @@ public class StartUITwo {
                     System.out.println("Хранилище еще не содержит заявок");
                 }
             }
+            else if(select == 2){
+                System.out.println("=== replacement of the application ====");
+                System.out.println("Ведите id");
+                int id = Integer.parseInt(scanner.nextLine());
+                System.out.println("Введите имя заявки");
+                String name = scanner.nextLine();
+                Item item = new Item(name);
+                tracker.replace(item, id);
+                System.out.println("Заявка изменена успешно.");
+            }
             else if(select == 6){
                 run = false;
             }
