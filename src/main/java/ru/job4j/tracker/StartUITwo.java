@@ -38,6 +38,11 @@ public class StartUITwo {
                 Item item = new Item(name);
                 tracker.replace(item, id);
                 System.out.println("Заявка изменена успешно.");
+                if (tracker.replace(item, id)) {
+                    System.out.println("Заявка изменена успешно.");
+                } else {
+                    System.out.println("Ошибка замены заявки.");
+                }
             }
             else if(select == 6){
                 run = false;
