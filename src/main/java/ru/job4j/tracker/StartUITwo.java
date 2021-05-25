@@ -53,7 +53,6 @@ public class StartUITwo {
                 } else {
                     System.out.println("Ошибка удаления заявки.");
                 }
-
             }
 
             else if(select == 6){
