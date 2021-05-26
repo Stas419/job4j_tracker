@@ -5,11 +5,17 @@ import ru.job4j.tracker.Transport;
 public class Bus implements Transport {
     @Override
     public void drive() {
-
+        System.out.println("Едем");
     }
 
     @Override
     public void passengers(int pas) {
+        if(pas > 1 ){
+            System.out.println("Двери закрываются");
+        }
+        else{
+            System.out.println("Ждем пасажиров");
+        }
 
     }
 
