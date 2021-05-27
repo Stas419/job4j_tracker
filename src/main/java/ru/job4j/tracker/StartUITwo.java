@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class StartUITwo {
     public void init(Input input, Tracker tracker) {
-        boolean run = true;
+        boolean run = true ;
         while (run) {
             showMenu();
             System.out.print("Select: ");
