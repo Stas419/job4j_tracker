@@ -4,6 +4,14 @@ import java.util.Arrays;
 //import java.util.Scanner;
 
 public class StartUITwo {
+
+    public static void createItem(Input input, Tracker tracker) {
+        System.out.println("=== Create a new Item ====");
+        String name = input.askStr("Enter name: ");
+        Item item = new Item(name);
+        tracker.add(item);
+    }
+
     public void init(Input input, Tracker tracker) {
         boolean run = true ;
         while (run) {
@@ -31,13 +39,9 @@ public class StartUITwo {
             }
             else if(select == 2){
                 System.out.println("=== replacement of the application ====");
-                System.out.println("Ведите id");
-                int id = Integer.parseInt(input.askStr(""));
-                System.out.println("Введите имя заявки");
-                String name = input.askStr("");;
+                int id = input.askInt("Ведите id");
+                String name = input.askStr("Введите имя заявки");
                 Item item = new Item(name);
-                tracker.replace(item, id);
-                System.out.println("Заявка изменена успешно.");
                 if (tracker.replace(item, id)) {
                     System.out.println("Заявка изменена успешно.");
                 } else {
@@ -96,6 +100,8 @@ public class StartUITwo {
         for (int i = 0; i < menu.length; i++) {
             System.out.println(i + "." + menu[i]);
         }
+
+
 
     }
 

@@ -56,7 +56,7 @@ public class Tracker {
         return rsl;
     }
 
-    public boolean delete(int id) {
+    public  boolean delete(int id) {
         boolean rsl = false;
         int index = indexOf(id);
             if(index != -1){
@@ -71,6 +71,10 @@ public class Tracker {
     public Item[] findAll() {
         return Arrays.copyOf(items, size);
     }
+
+
+
+
 
 
 }
