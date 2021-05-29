@@ -7,7 +7,7 @@ public class StartUI {
         while (run) {
             showMenu();
             System.out.print("Select: ");
-            int select = Integer.parseInt( input.askStr("Введите id: "));
+            int select = input.askInt("Введите id: ");
             if(select == 0){
                 StartUI.createItem(input, tracker);
             }
@@ -69,7 +69,7 @@ public class StartUI {
 
     public static void deleteItem(Input input, Tracker tracker){
         System.out.println("=== Delete item ====");
-        int id = Integer.parseInt(input.askStr("Введите id:"));
+        int id = input.askInt("Введите id:");
         if (tracker.delete(id)) {
             System.out.println("Заявка удалена успешно.");
         } else {
@@ -79,7 +79,7 @@ public class StartUI {
 
     public static void findIdItem(Input input, Tracker tracker){
         System.out.println("=== Find item by id ====");
-        int id = Integer.parseInt(input.askStr("Введите id:"));
+        int id =input.askInt("Введите id:");
         Item item = tracker.findById(id);
         if(item != null){
             System.out.println(item);
@@ -118,6 +118,5 @@ public class StartUI {
         System.out.println("выберите пункт меню");
         new StartUI().init(input, tracker);
         startUITwo.showMenu();
-        int select = Integer.valueOf(input.askStr(""));
     }
 }
