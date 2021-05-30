@@ -15,7 +15,7 @@ public class StartUI {
                 StartUI.showItem(input, tracker);
             }
             else if(select == 2){
-                StartUI.replacementItem(input, tracker);
+                StartUI.replaceItem(input, tracker);
             }
             else if(select == 3){
                 StartUI.deleteItem(input, tracker);
@@ -55,7 +55,7 @@ public class StartUI {
         }
     }
 
-    public static void replacementItem(Input input, Tracker tracker){
+    public static void replaceItem(Input input, Tracker tracker){
         System.out.println("=== replacement of the application ====");
         int id = input.askInt("Ведите id");
         String name = input.askStr("Введите имя заявки");
