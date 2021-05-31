@@ -41,7 +41,7 @@ public class StartUITest {
                 "delete item"
         };
         StartUI.deleteItem(new StubInput(answers), tracker);
-        Item replaced = tracker.findById(item.getId());
-        assertThat(replaced.getName(), is("replaced item"));
+        Item[] replaced = tracker.findByName(item.getName());
+        assertThat(replaced, is("null"));
     }
 }
