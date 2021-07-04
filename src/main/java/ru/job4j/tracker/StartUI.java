@@ -1,15 +1,18 @@
 package ru.job4j.tracker;
 
 public class StartUI {
+    UserAction[] actions ={
+            new CreateAction()
+    };
 
-    public void init(Input input, Tracker tracker) {
+    public void init(Input input, Tracker tracker, UserAction[] actions ) {
         boolean run = true ;
         while (run) {
             showMenu();
-            System.out.print("Select: ");
             int select = input.askInt("Введите id: ");
-            if(select == 0){
-                StartUI.createItem(input, tracker);
+            if (select == 0){
+                UserAction action = actions[select];
+                run = action.execute(input, tracker);
             }
             else if (select == 1) {
                 StartUI.showItem(input, tracker);
@@ -79,7 +82,7 @@ public class StartUI {
 
     public static void findIdItem(Input input, Tracker tracker){
         System.out.println("=== Find item by id ====");
-        int id =input.askInt("Введите id:");
+        int id = input.askInt("Введите id:");
         Item item = tracker.findById(id);
         if(item != null){
             System.out.println(item);
@@ -112,8 +115,10 @@ public class StartUI {
     }
 
     public static void main(String[] args) {
+        UserAction[] actions = {new CreateAction()};
         Input input = new ConsoleInput();
         Tracker tracker = new Tracker();
-        new StartUI().init(input, tracker);
+        new StartUI().init(input, tracker, actions);
+
     }
 }
