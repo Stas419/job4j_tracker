@@ -7,7 +7,7 @@ public class Matches {
         Scanner scan = new Scanner(System.in);
         System.out.println("Игра 11.");
         boolean turn = true;
-        int count = 11;
+        int count = 5;
         while (count > 0) {
             String player = turn ? "Первый игрок" : "Второй игрок";
             System.out.println(player + " введите число от 1 до 3:");
@@ -15,15 +15,13 @@ public class Matches {
             if(matches <= 3){
                 turn = !turn;
                 System.out.println("Осталось - " + (count = count - matches));
-                if(count == 0){
-                    System.out.println("игра окончена выйграл - "+ player);
-                }
             }
-            else{
-                System.out.println("введите число от 1 до 3");
-            }
-
         }
-
+        if(!turn){
+            System.out.println("выйграл первый игрок ");
+        }
+        else{
+            System.out.println("выйграл второй игрок ");
+        }
     }
 }
