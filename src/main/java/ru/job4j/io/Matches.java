@@ -7,12 +7,12 @@ public class Matches {
         Scanner scan = new Scanner(System.in);
         System.out.println("Игра 11.");
         boolean turn = true;
-        int count = 5;
+        int count = 11;
         while (count > 0) {
             String player = turn ? "Первый игрок" : "Второй игрок";
             System.out.println(player + " введите число от 1 до 3:");
             int matches = Integer.parseInt(scan.nextLine());
-            if(matches <= 3){
+            if(matches <= 3 && matches > 0){
                 turn = !turn;
                 System.out.println("Осталось - " + (count = count - matches));
             }
