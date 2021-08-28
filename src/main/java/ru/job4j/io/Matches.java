@@ -14,7 +14,8 @@ public class Matches {
             int matches = Integer.parseInt(scan.nextLine());
             if(matches <= 3 && matches > 0){
                 turn = !turn;
-                System.out.println("Осталось - " + (count = count - matches));
+                count-= matches;
+                System.out.println("Осталось - " + (count));
             }
         }
         if(!turn){
