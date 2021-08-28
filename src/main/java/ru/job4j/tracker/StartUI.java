@@ -1,9 +1,6 @@
 package ru.job4j.tracker;
 
 public class StartUI {
-    UserAction[] actions ={
-            new CreateAction()
-    };
 
     public void init(Input input, Tracker tracker, UserAction[] actions ) {
         boolean run = true ;
@@ -23,18 +20,15 @@ public class StartUI {
             else if(select == 3){
                 StartUI.deleteItem(input, tracker);
             }
-
             else if(select == 4){
                 StartUI.findIdItem(input, tracker);
             }
             else if(select == 5){
                 StartUI.findNameItem(input, tracker);
             }
-
             else if(select == 6){
                 run = false;
             }
-
         }
     }
 
