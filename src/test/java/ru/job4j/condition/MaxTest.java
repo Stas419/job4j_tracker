@@ -6,7 +6,7 @@ import org.junit.Test;
 public class MaxTest {
     @Test
     public void max() {
-        int left = 2;
+        int left = 3;
         int right = 5;
         int middle = 9;
         int expected = 9;
