@@ -10,7 +10,7 @@ public class Max {
     }
 
     public static void main(String[] args){
-        System.out.println(Max.max(5, 4));
+        System.out.println(Max.max(3, 4));
     }
 }
 

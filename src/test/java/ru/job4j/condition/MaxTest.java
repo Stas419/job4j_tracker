@@ -11,8 +11,8 @@ public class MaxTest {
     public void max() {
         int left = 2;
         int right = 5;
-        int middle = 8;
-        int expected = 8;
+        int middle = 9;
+        int expected = 9;
         int rsl = Max.max(left, right, middle);
         Assert.assertEquals(expected, rsl);
     }
