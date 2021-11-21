@@ -1,7 +1,7 @@
 package ru.job4j.calculator;
-import static ru.job4j.math.MathFunction. *;
+import static ru.job4j.math.MathFunctionn.*;
 
-public class MathCalculator {
+public class MathCalculatorr {
     public static double sumAndMultiply(double first, double second){
         return sum(first, second) +
                 multiply(first, second);
@@ -17,8 +17,8 @@ public class MathCalculator {
     }
 
     public static void main(String[] args){
-        System.out.println("результат расчета равен: " + MathCalculator.sumAndMultiply(10, 20));
-        System.out.println("результат расчета равен: " + MathCalculator.sumOfAllTransactions(23, 15));
-        System.out.println("результат расчета равен: " + MathCalculator.sumDifferencAndDivision(20, 19));
+        System.out.println("результат расчета равен: " + MathCalculatorr.sumAndMultiply(10, 20));
+        System.out.println("результат расчета равен: " + MathCalculatorr.sumOfAllTransactions(23, 15));
+        System.out.println("результат расчета равен: " + MathCalculatorr.sumDifferencAndDivision(20, 19));
     }
 }

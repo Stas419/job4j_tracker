@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Tracker {
     private final Item[] items = new Item[100];
-    private int ids = 0;
+    private int id = 0;
     private int size = 0;
 
     private int indexOf(int id) {
@@ -19,7 +19,7 @@ public class Tracker {
     }
 
     public Item add(Item item) {
-        item.setId(ids++);
+        item.setId(id++);
         items[size++] = item;
         return item;
     }
