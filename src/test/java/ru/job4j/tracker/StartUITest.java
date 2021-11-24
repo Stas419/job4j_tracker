@@ -8,12 +8,10 @@ public class StartUITest {
 
     @Test
     public void whenCreateItem() {
-        Input in = new StubInput(
-                new String[] {"0", "Item name", "1"}
-        );
+        Input in = new StubInput(new String[] {"0", "Item name", "1"});
         Tracker tracker = new Tracker();
         UserAction[] actions = {new CreateAction()};
-        new StartUI().init(in, tracker, actions);
+        new StartUI().init(in, tracker , actions);
         assertThat(tracker.findAll()[0].getName(), is("Item name"));
     }
 
@@ -23,7 +21,7 @@ public class StartUITest {
         Item item = new Item("new item");
         tracker.add(item);
         String[] answers = {
-                String.valueOf(item.getId()), /* id сохраненной заявки в объект tracker. */
+                String.valueOf(item.getId()),
                 "replaced item"
         };
         StartUI.replaceItem(new StubInput(answers), tracker);
