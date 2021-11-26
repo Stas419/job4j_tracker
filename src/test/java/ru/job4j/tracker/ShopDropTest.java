@@ -1,6 +1,8 @@
-package ru.job4j.pojo;
+package ru.job4j.tracker;
 
 import org.junit.Test;
+import ru.job4j.pojo.Product;
+import ru.job4j.pojo.ShopDrop;
 
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.nullValue;

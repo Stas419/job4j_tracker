@@ -9,7 +9,7 @@ public class Max {
         return max(middle, max(left, right));
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         System.out.println(Max.max(3, 5));
     }
 }

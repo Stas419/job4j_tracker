@@ -13,17 +13,19 @@ public class Library {
         book[2] = geography;
         book[3] = physics;
 
-        for(Book bok: book){
+        for (Book bok: book) {
             System.out.println(bok.getName() + " - " + bok.getNumPages());
         }
 
         Book bok = book[0];
         book[0] = book[3];
         book[3] = bok;
-        System.out.println( "ячейка с индексом 0 - "+ book[0].getName() + " - " +  book[0].getNumPages());
-        System.out.println( "ячейка с индексом 3 - "+ book[3].getName() + " - " +  book[3].getNumPages());
+        System.out.println("ячейка с индексом 0 - " + book[0].getName()
+                + " - " +  book[0].getNumPages());
+        System.out.println("ячейка с индексом 3 - " + book[3].getName()
+                + " - " +  book[3].getNumPages());
 
-        for(Book bok1: book) {
+        for (Book bok1: book) {
             if ("Чистый код".equals(bok1.getName())) {
                 System.out.println("В списке есть такая книга");
                 System.out.println(bok.getName() + " - " + bok.getNumPages());

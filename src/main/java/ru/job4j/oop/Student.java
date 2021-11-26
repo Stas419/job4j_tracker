@@ -1,10 +1,11 @@
 package ru.job4j.oop;
 
-public class Student extends Object{
+public class Student extends Object {
     public void music() {
         System.out.println("Tra tra tra");
     }
-    public void song(){
+
+    public void song() {
         System.out.println("I believe I can fly");
     }
 
@@ -17,7 +18,5 @@ public class Student extends Object{
         petya.song();
         petya.song();
         petya.song();
-
-
     }
 }

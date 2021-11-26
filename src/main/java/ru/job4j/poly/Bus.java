@@ -4,7 +4,7 @@ import ru.job4j.tracker.Transport;
 
 public class Bus implements Transport, Vehicle {
 
-    public void move(){
+    public void move() {
         System.out.println("едет по асфальту");
     }
 
@@ -15,10 +15,9 @@ public class Bus implements Transport, Vehicle {
 
     @Override
     public void passengers(int pas) {
-        if(pas > 1 ){
+        if (pas > 1) {
             System.out.println("Двери закрываются");
-        }
-        else{
+        } else {
             System.out.println("Ждем пасажиров");
         }
 

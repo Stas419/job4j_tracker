@@ -15,7 +15,6 @@ public class Triangle {
         return (a + b + c) / 2.0;
     }
 
-
     public boolean exist(double ab, double ac, double bc) {
 
         return ab + bc > ac && bc + ac > ab && ab + ac > bc;
@@ -28,10 +27,9 @@ public class Triangle {
         double bc = second.distance(third);
         double p = period(ab, ac, bc);
         if (this.exist(ab, ac, bc)) {
-            rsl = Math.sqrt(p*(p - ab)*(p - ac)*(p - bc));
+            rsl = Math.sqrt(p * (p - ab) * (p - ac) * (p - bc));
         }
         return rsl;
     }
-
 
 }

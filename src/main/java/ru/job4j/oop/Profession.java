@@ -6,26 +6,26 @@ public class Profession {
     private String education;
     private String birthday;
 
-    public Profession(String name,String surname, String education, String birthday){
+    public Profession(String name, String surname, String education, String birthday) {
         this.name = name;
         this.surname = surname;
         this.education = education;
         this.birthday = birthday;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public String getSurname(){
+    public String getSurname() {
         return surname;
     }
 
-    public String getEducation(){
+    public String getEducation() {
         return education;
     }
 
-    public String getBirthday(){
-        return birthday;
+    public String getBirthday() {
+         return birthday;
     }
 }

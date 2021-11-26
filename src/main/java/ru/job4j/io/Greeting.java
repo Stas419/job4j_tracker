@@ -9,7 +9,7 @@ public class Greeting {
         System.out.println("Здравствуйте, что вы хотите узнать?");
         String name = input.nextLine();
         int answer = new Random().nextInt(3);
-        switch(answer){
+        switch(answer) {
             case 0:
                 System.out.println("да");
                 break;

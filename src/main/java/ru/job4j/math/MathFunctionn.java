@@ -1,7 +1,8 @@
 package ru.job4j.math;
 
 public class MathFunctionn {
-    public static double sum(double first, double second){
+    public static double sum(double first, double second) {
+
         return first +  second;
     }
 
@@ -9,11 +10,11 @@ public class MathFunctionn {
         return first * second;
     }
 
-    public static double difference(double first, double second){
+    public static double difference(double first, double second) {
        return first - second;
     }
 
-    public static double division(double first, double second){
+    public static double division(double first, double second) {
         return first / second;
     }
 }
