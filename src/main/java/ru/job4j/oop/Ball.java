@@ -6,6 +6,7 @@ public class Ball {
             System.out.println("съеден");
         } else if (condition != true) {
             System.out.println("убежал");
+
         }
     }
 }
