@@ -7,5 +7,6 @@ public class Ball {
         } else if (condition != true) {
             System.out.println("убежал");
         }
+
     }
 }
