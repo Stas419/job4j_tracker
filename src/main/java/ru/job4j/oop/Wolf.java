@@ -4,5 +4,6 @@ public class Wolf {
     public  void tryRun(Ball ball) {
         boolean iamy = true;
         ball.tryRun(iamy);
+
     }
 }
