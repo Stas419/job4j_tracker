@@ -9,6 +9,10 @@ public class Max {
         return max(middle, max(left, right));
     }
 
+    public static int max(int left, int right, int middle, int x) {
+        return max(middle, max(left, right));
+    }
+
     public static void main(String[] args) {
         System.out.println(Max.max(3, 5));
     }
