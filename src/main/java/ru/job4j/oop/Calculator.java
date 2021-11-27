@@ -3,20 +3,20 @@ package ru.job4j.oop;
 public class Calculator {
     private static int x = 5;
 
-    public static int minus(int num1) {
-        return num1 - x;
+    public static int minus(int num) {
+        return num - x;
     }
 
-    public int divide(int num2) {
-        return  num2 / x;
+    public int divide(int num) {
+        return  num / x;
     }
 
-    public static int multiply(int num3) {
-        return num3 * x;
+    public static int multiply(int num) {
+        return num * x;
     }
 
-    public int sum(int num4) {
-        return num4 + x;
+    public int sum(int num) {
+        return num + x;
     }
 
     public int sumAllOperation(int num) {
