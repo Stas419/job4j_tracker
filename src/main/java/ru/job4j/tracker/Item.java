@@ -39,10 +39,6 @@ public class Item {
         return created;
     }
 
-    public static void main(String[] args) {
-        LocalDateTime created = LocalDateTime.now();
-    }
-
     @Override
     public String toString() {
         return "Item{" + "id=" + id + ", name='" + name + '\'' + ", created=" + created + '}';
