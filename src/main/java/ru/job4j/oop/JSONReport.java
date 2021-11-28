@@ -11,6 +11,5 @@ public class JSONReport extends TextReport {
     public static void main(String[] args) {
         JSONReport jSONReport = new JSONReport();
         System.out.println(jSONReport.generate("собака", "муха"));
-
     }
 }
