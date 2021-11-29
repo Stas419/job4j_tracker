@@ -7,7 +7,7 @@ public class Student {
     private int group;
     private double dateRceipts;
 
-    public void setSurname(String surname) {
+    public void setSurname(String surname)  {
         this.surname = surname;
     }
 
