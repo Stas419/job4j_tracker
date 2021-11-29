@@ -26,6 +26,7 @@ public class ShopTest {
         assertThat(rsl, is(0));
     }
 
+
     @Test
     public void whenHasNotNull() {
         Product[] products = new Product[1];
