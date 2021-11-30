@@ -36,7 +36,7 @@ public class Library {
 
         for (int i = 0; i < mas.length; i++) {
             Book search = mas[i];
-            if (search.getName() == "Clean code") {
+            if ("Clean code".equals(search.getName())) {
                 System.out.println("книга найдена: " + search.getName());
                 break;
             }
