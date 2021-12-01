@@ -10,14 +10,14 @@ public class License {
     private Date created;
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) {
+    public boolean equals(Object obj) {
+        if (this == obj) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (obj == null || getClass() != obj.getClass()) {
             return false;
         }
-        License license = (License) o;
+        License license = (License) obj;
         return Objects.equals(owner, license.owner) && Objects.equals(model, license.model)
                 && Objects.equals(code, license.code)
                 && Objects.equals(created, license.created);

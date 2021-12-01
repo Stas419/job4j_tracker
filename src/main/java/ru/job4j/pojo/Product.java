@@ -28,14 +28,14 @@ public class Product {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) {
+    public boolean equals(Object obj) {
+        if (this == obj) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (obj == null || getClass() != obj.getClass()) {
             return false;
         }
-        Product product = (Product) o;
+        Product product = (Product) obj;
         return count == product.count && Objects.equals(name, product.name);
     }
 
