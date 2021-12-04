@@ -7,5 +7,4 @@ public class StartUI {
         Item item = new Item();
         System.out.println(item.toString());
     }
-
 }
