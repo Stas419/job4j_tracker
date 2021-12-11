@@ -1,5 +1,4 @@
 package ru.job4j.tracker;
-
 public class ShowItems implements UserAction {
     @Override
     public String name() {

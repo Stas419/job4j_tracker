@@ -1,4 +1,5 @@
 package ru.job4j.tracker;
+
 public class EditItem implements UserAction {
 
     public String name()  {
