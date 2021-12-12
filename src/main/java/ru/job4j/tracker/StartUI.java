@@ -29,7 +29,7 @@ public class StartUI {
         UserAction[] actions = {
                 new CreateAction(out),
                 new ShowItems(out),
-                new ReplaceAction(),
+                new ReplaceAction(out),
                 new DeleteItem(out),
                 new FindById(out),
                 new FindByName(out),
