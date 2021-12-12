@@ -21,13 +21,18 @@ public class StartUI {
     public static void main(String[] args) {
         Input input = new ConsoleInput();
         Tracker tracker = new Tracker();
+        Output out = new Output() {
+            @Override
+            public void println(Object obj) {
+            }
+        };
         UserAction[] actions = {
-                new CreateAction(),
-                new DeleteItem(),
-                new EditItem(),
-                new FindById(),
-                new ShowItems(),
-                new FindByName(),
+                new CreateAction(out),
+                new ShowItems(out),
+                new ReplaceAction(),
+                new DeleteItem(out),
+                new FindById(out),
+                new FindByName(out),
                 new ExitProgram()
         };
         new StartUI().init(input, tracker, actions);
