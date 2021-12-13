@@ -9,7 +9,7 @@ public class ReplaceAction implements UserAction {
 
     @Override
     public String name() {
-        return "=== replacement of the application ====";
+        return "Replacement of the application";
     }
 
     @Override
