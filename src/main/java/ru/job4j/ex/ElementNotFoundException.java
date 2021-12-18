@@ -21,7 +21,6 @@ public class ElementNotFoundException extends java.lang.Exception {
         String[] mas = new String[]{"окно", "молоко", "трамвай"};
         try {
             indexOf(mas, "окно");
-
         } catch (ElementNotFoundException e) {
             e.printStackTrace();
         }
