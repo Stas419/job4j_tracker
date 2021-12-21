@@ -27,7 +27,7 @@ public class StartUI {
 
         Function<Integer, Integer> a = o -> 5;
 
-//        Consumer<String[]> mainF = StartUI::main;
+        Consumer<String[]> mainF = StartUI::main;
 
         List<UserAction> stasList =
                 List.of(actions).stream()
@@ -42,7 +42,6 @@ public class StartUI {
             out.println(index + ". " + actions[index].name());
         }
 
-//        mainF.accept(sdfsd);
     }
 
     public static void main(String[] args) {
@@ -58,7 +57,7 @@ public class StartUI {
 
         var a = "123";
 
-        //Output out1 = System.out::println;
+        Output out1 = System.out::println;
 
         UserAction[] actions = {
                 new CreateAction(out),
