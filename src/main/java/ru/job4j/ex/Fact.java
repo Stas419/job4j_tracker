@@ -1,4 +1,5 @@
 package ru.job4j.ex;
+
 public class Fact {
     public static void main(String[] args) {
         new Fact().calc(-1);
