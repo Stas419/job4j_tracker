@@ -10,9 +10,11 @@ public class ElementNotFoundException extends java.lang.Exception {
         for (int i = 0; i < value.length; i++) {
             if (value[i].equals(key)) {
                 rsl = 0;
-            } else {
-                 new ElementNotFoundException("Url could not be null");
+                break;
             }
+        }
+        if (rsl == -1) {
+            new ElementNotFoundException("Url could not be null");
         }
         return rsl;
     }
