@@ -26,22 +26,7 @@ public class FindEl {
         }
         return true;
     }
+}
 
-    public static void main(String[] args) throws UserNotFoundException {
-        User[] users = {
-                new User("Petr Arsentev", true)
-        };
-        User user = findUser(users, "Petr Arsentev");
-        try {
-            if (validate(user)) {
-                System.out.println("This user has an access");
-            }
-        } catch (UserInvalidException e) {
-            System.out.println("Пользователь не валидный.");
-            e.printStackTrace();
-        } catch (UserNotFoundException e) {
-            System.out.println("Пользователя не найдено.");
-            e.printStackTrace();
-        }
-    }
+
 
