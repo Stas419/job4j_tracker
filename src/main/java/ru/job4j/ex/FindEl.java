@@ -27,12 +27,12 @@ public class FindEl {
         return true;
     }
 
-    public static void process(String[] values, String key, String[] abuses) {
+    public static void main(String[] args) throws UserNotFoundException {
         User[] users = {
                 new User("Petr Arsentev", true)
         };
+        User user = findUser(users, "Petr Arsentev");
         try {
-            User user = findUser(users, "Petr Arsentev");
             if (validate(user)) {
                 System.out.println("This user has an access");
             }
@@ -42,7 +42,6 @@ public class FindEl {
         } catch (UserNotFoundException e) {
             System.out.println("Пользователя не найдено.");
             e.printStackTrace();
-
         }
     }
-}
+

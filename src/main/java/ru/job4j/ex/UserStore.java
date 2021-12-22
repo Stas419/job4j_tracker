@@ -9,7 +9,7 @@ public class UserStore {
             if (users[i].equals(login)) {
                 return users[i];
             } else {
-                new UserNotFoundException();
+                new UserNotFoundException("пользователя не найдено.");
             }
         }
         return null;
@@ -17,20 +17,20 @@ public class UserStore {
 
     public static boolean validate(User user) throws UserInvalidException {
         if (!user.isValid() || user.getUsername().length() < 3) {
-            new UserInvalidException();
+            new UserInvalidException(" пользователь не валидный.");
         } else {
             return true;
         }
         return false;
     }
 
-    public static void process(String[] values, String key, String[] abuses) {
-        try {
-            if (indexOf(values, key) != -1) {
-                sent(key, abuses);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
+    public static void main(String[] args) throws UserNotFoundException {
+        User[] users = {
+                new User("Petr Arsentev", true)
+        };
+        User user = findUser(users, "Petr Arsentev");
+        if (validate(user)) {
+            System.out.println("This user has an access");
         }
     }
 
