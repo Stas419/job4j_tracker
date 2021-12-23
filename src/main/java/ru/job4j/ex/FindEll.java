@@ -1,5 +1,4 @@
 package ru.job4j.ex;
-
 import static ru.job4j.ex.UserStore.findUser;
 import static ru.job4j.ex.UserStore.validate;
 
