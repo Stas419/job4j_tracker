@@ -6,14 +6,14 @@ import static ru.job4j.ex.UserStore.validate;
 public class FindEl {
     public static int indexOf(String[] values, String key) throws ElementNotFoundException {
         int rsl = -1;
-        for (String variable : values) {
-            if (variable.equals(key)) {
-                rsl = 0;
+        for (int i = 0; i < values.length; i++) {
+            if (values[i].equals(key)) {
+                rsl = i;
                 break;
             }
         }
         if (rsl == -1) {
-            new ElementNotFoundException("Url could not be null");
+            throw  new ElementNotFoundException("Url could not be null");
         }
         return rsl;
     }
