@@ -1,17 +1,12 @@
 package ru.job4j.ex;
 
-import static ru.job4j.ex.FindEl.indexOf;
-import static ru.job4j.ex.FindEl.sent;
-
 public class UserStore {
     public static User findUser(User[] users, String login) throws UserNotFoundException {
-        int num = 0;
         for (User user : users) {
-            if (users.equals(login)) {
+            if (user.getUsername().equals(login)) {
                 return user;
             }
         }
-
          throw  new UserNotFoundException("пользователя не найдено.");
     }
 
