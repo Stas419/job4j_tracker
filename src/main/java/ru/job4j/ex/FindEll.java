@@ -1,5 +1,7 @@
 package ru.job4j.ex;
 
+import static ru.job4j.ex.UserStore.findUser;
+
 public class FindEll {
     public static int indexOf(String[] values, String key) throws ElementNotFoundException {
         int rsl = -1;
