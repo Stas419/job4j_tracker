@@ -11,13 +11,13 @@ public class UserStore {
                 return user;
             }
         }
-            new UserNotFoundException("пользователя не найдено.");
-        return null;
+
+         throw  new UserNotFoundException("пользователя не найдено.");
     }
 
     public static boolean validate(User user) throws UserInvalidException {
         if (!user.isValid() || user.getUsername().length() < 3) {
-            new UserInvalidException(" пользователь не валидный.");
+          throw new UserInvalidException(" пользователь не валидный.");
         }
         return true;
     }
