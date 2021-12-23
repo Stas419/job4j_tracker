@@ -18,16 +18,6 @@ public class FindEl {
         return rsl;
     }
 
-    public static boolean sent(String value, String[] abuses) throws ElementAbuseException,
-            ElementNotFoundException {
-        if (indexOf(abuses, value) != -1) {
-            System.out.println("сообщение отправлено");
-        } else {
-            throw  new ElementAbuseException("Злоупотребления элементами");
-        }
-        return true;
-    }
-
     public static void main(String[] args) throws ElementNotFoundException {
         String[] values = new String[]{"Петр", "Семен"};
         String key = "Петр";
