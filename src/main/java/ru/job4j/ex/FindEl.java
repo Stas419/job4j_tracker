@@ -26,6 +26,12 @@ public class FindEl {
         }
         return true;
     }
+
+    public static void main(String[] args) throws ElementNotFoundException {
+        String[] values = new String[]{"Петр", "Семен"};
+        String key = "Петр";
+        indexOf(values, key);
+    }
 }
 
 
