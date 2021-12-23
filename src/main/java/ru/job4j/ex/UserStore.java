@@ -6,41 +6,35 @@ import static ru.job4j.ex.FindEl.sent;
 public class UserStore {
     public static User findUser(User[] users, String login) throws UserNotFoundException {
         int num = 0;
-        for (int i = 0; i < users.length; i++) {
-            if (users[i].equals(login)) {
-                  num = i;
-            } else {
-                new UserNotFoundException("пользователя не найдено.");
+        for (User user : users) {
+            if (users.equals(login)) {
+                return user;
             }
         }
-        return users[num];
+            new UserNotFoundException("пользователя не найдено.");
+        return null;
     }
 
     public static boolean validate(User user) throws UserInvalidException {
-        boolean rsl = true;
-        if (user.isValid()) {
-            System.out.println("все хорошо");
-        } else if (!user.isValid() || user.getUsername().length() < 3) {
+        if (!user.isValid() || user.getUsername().length() < 3) {
             new UserInvalidException(" пользователь не валидный.");
-            rsl = false;
         }
-        return rsl;
+        return true;
     }
 
     public static void main(String[] args) throws UserNotFoundException {
         User[] users = {new User("Petr Arsentev", true)
         };
-        User user = findUser(users, "Petr Arsentev");
+
         try {
+            User user = findUser(users, "Petr Arsentev");
             if (validate(user)) {
                 System.out.println("This user has an access");
             }
-        } catch (UserInvalidException e) {
-            System.out.println("Пользователь не валидный.");
-            e.printStackTrace();
-        } catch (UserNotFoundException e) {
-            System.out.println("Пользователя не найдено.");
-            e.printStackTrace();
+        } catch (UserInvalidException uie) {
+            uie.printStackTrace();
+        } catch (UserNotFoundException unfe) {
+            unfe.printStackTrace();
         }
     }
 }
