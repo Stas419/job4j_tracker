@@ -35,7 +35,6 @@ public class StartUI {
         Tracker tracker = new Tracker();
 
         Output out = new ConsoleOutput();
-        ValidateInput validateInput = new ValidateInput();
 
         UserAction[] actions = {
                 new CreateAction(out),
@@ -44,7 +43,7 @@ public class StartUI {
                 new DeleteItem(out),
                 new FindById(out),
                 new FindByName(out),
-                new ExitProgram(),
+                new ExitProgram(out),
                 new FindById(out)
         };
         new StartUI(out).init(input, tracker, actions);
