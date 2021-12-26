@@ -12,7 +12,6 @@ public class StartUITest {
         Output out = new Output() {
             @Override
             public void println(Object obj) {
-
             }
         };
         Input in = new StubInput(
