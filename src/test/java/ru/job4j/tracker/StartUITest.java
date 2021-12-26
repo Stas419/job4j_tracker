@@ -9,7 +9,7 @@ public class StartUITest {
 
     @Test
     public void whenCreateItem() {
-        Output out = new Output() {
+        Output out = new StubOutput() {
             @Override
             public void println(Object obj) {
             }
@@ -28,7 +28,7 @@ public class StartUITest {
 
     @Test
     public void whenReplaceItem() {
-        Output out = new Output() {
+        Output out = new StubOutput() {
             @Override
             public void println(Object obj) {
 
