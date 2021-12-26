@@ -19,7 +19,7 @@ public class StartUITest {
         Tracker tracker = new Tracker();
         UserAction[] actions = {
                 new CreateAction(out),
-                new ExitProgram(out)
+                new ExitProgram()
         };
         new StartUI(out).init(in, tracker, actions);
         assertThat(tracker.findAll()[0].getName(), is("Item name"));
@@ -40,7 +40,7 @@ public class StartUITest {
                 new String[] {"0", String.valueOf(item.getId()), replacedName,  "1"});
         UserAction[] actions = {
                 new ReplaceAction(out),
-                new ExitProgram(out)
+                new ExitProgram()
         };
         new StartUI(out).init(in, tracker, actions);
         assertThat(tracker.findById(item.getId()).getName(), is(replacedName));
@@ -61,7 +61,7 @@ public class StartUITest {
         );
         UserAction[] actions = {
                 new DeleteItem(out),
-                new ExitProgram(out)
+                new ExitProgram()
         };
         new StartUI(out).init(in, tracker, actions);
         assertThat(tracker.findById(item.getId()), is(nullValue()));
@@ -76,7 +76,7 @@ public class StartUITest {
                 );
         Tracker tracker = new Tracker();
         UserAction[] actions = new UserAction[]{
-                new ExitProgram(out)
+                new ExitProgram()
         };
         new StartUI(out).init(in, tracker, actions);
         String ln = System.lineSeparator();
