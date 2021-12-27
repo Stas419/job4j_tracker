@@ -9,9 +9,6 @@ public class StartUITest {
     @Test
     public void whenCreateItem() {
         Output out = new StubOutput() {
-            @Override
-            public void println(Object obj) {
-            }
         };
         Input in = new StubInput(
                 out, new String[] {"0", "Item name", "1"}
@@ -19,7 +16,7 @@ public class StartUITest {
         Tracker tracker = new Tracker();
         UserAction[] actions = {
                 new CreateAction(out),
-                new ExitProgram()
+                new ExitProgram(out)
         };
         new StartUI(out).init(in, tracker, actions);
         assertThat(tracker.findAll()[0].getName(), is("Item name"));
@@ -28,10 +25,6 @@ public class StartUITest {
     @Test
     public void whenReplaceItem() {
         Output out = new StubOutput() {
-            @Override
-            public void println(Object obj) {
-
-            }
         };
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("Replaced item"));
@@ -40,7 +33,7 @@ public class StartUITest {
                 new String[] {"0", String.valueOf(item.getId()), replacedName,  "1"});
         UserAction[] actions = {
                 new ReplaceAction(out),
-                new ExitProgram()
+                new ExitProgram(out)
         };
         new StartUI(out).init(in, tracker, actions);
         assertThat(tracker.findById(item.getId()).getName(), is(replacedName));
@@ -49,10 +42,6 @@ public class StartUITest {
     @Test
     public void whenDeleteItem() {
         Output out = new StubOutput() {
-            @Override
-            public void println(Object obj) {
-
-            }
         };
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("Deleted item"));
@@ -61,7 +50,7 @@ public class StartUITest {
         );
         UserAction[] actions = {
                 new DeleteItem(out),
-                new ExitProgram()
+                new ExitProgram(out)
         };
         new StartUI(out).init(in, tracker, actions);
         assertThat(tracker.findById(item.getId()), is(nullValue()));
@@ -70,13 +59,10 @@ public class StartUITest {
     @Test
     public void whenInvalidExit() {
         Output out = new StubOutput();
-        Input in = new StubInput(
-                    new String[]{
-                            "111", "0" }
-                );
+        Input in = new StubInput(out, new String[]{"111", "0" });
         Tracker tracker = new Tracker();
         UserAction[] actions = new UserAction[]{
-                new ExitProgram()
+                new ExitProgram(out)
         };
         new StartUI(out).init(in, tracker, actions);
         String ln = System.lineSeparator();
