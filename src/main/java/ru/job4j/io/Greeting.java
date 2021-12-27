@@ -9,7 +9,7 @@ public class Greeting {
         System.out.println("Здравствуйте, что вы хотите узнать?");
         String name = input.nextLine();
         int answer = new Random().nextInt(3);
-        switch(answer) {
+        switch (answer) {
             case 0:
                 System.out.println("да");
                 break;
@@ -19,9 +19,8 @@ public class Greeting {
             case 2:
                 System.out.println("Может быть");
                 break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + answer);
         }
     }
-
-
-
 }
