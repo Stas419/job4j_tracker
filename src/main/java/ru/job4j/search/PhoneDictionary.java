@@ -1,4 +1,5 @@
 package ru.job4j.search;
+
 import java.util.ArrayList;
 
 public class PhoneDictionary {
