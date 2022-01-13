@@ -1,7 +1,5 @@
 package ru.job4j.search;
 
-import java.util.ArrayList;
-
 public class Person {
    private String name;
    private String surname;
