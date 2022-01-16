@@ -1,5 +1,7 @@
 package ru.job4j.search;
 
+import ru.job4j.tracker.StubOutput;
+
 import java.util.ArrayList;
 
 public class PhoneDictionary {
@@ -15,6 +17,8 @@ public class PhoneDictionary {
             if (copy.getPhone().contains(key) || copy.getName().contains(key)
                     || copy.getSurname().contains(key) || copy.getAddress().contains(key)) {
                 result.add(copy);
+            } else {
+                return  new ArrayList<>();
             }
         }
         return result;
