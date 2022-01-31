@@ -17,8 +17,6 @@ public class PhoneDictionary {
             if (copy.getPhone().contains(key) || copy.getName().contains(key)
                     || copy.getSurname().contains(key) || copy.getAddress().contains(key)) {
                 result.add(copy);
-            } else {
-                return  new ArrayList<>();
             }
         }
         return result;
