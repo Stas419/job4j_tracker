@@ -1,5 +1,7 @@
 package ru.job4j.tracker;
 
+import java.util.ArrayList;
+
 public class ExitProgram implements UserAction {
     public ExitProgram(Output out) {
     }
